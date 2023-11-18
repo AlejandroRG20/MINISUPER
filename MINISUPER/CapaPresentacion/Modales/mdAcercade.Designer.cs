@@ -38,11 +38,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(105, 304);
+            this.label3.Location = new System.Drawing.Point(19, 304);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(185, 13);
+            this.label3.Size = new System.Drawing.Size(270, 13);
             this.label3.TabIndex = 36;
-            this.label3.Text = "Desarrollado por: Alejandro Rodriguez";
+            this.label3.Text = "Desarrollado por: Alejandro Rodriguez y Owen Espinoza";
             // 
             // label4
             // 

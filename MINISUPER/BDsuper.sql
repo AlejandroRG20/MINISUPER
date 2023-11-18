@@ -1,4 +1,4 @@
-ï»¿create database DBVENTASDEMO
+create database DBVENTASDEMO
 
 USE DBVENTASDEMO
 
@@ -181,7 +181,7 @@ begin
 		
 	end
 	else
-		set @Mensaje = 'No se puede repetir el documento para mÃ¡s de un usuario'
+		set @Mensaje = 'No se puede repetir el documento para más de un usuario'
 
 
 end
@@ -220,7 +220,7 @@ begin
 		
 	end
 	else
-		set @Mensaje = 'No se puede repetir el documento para mÃ¡s de un usuario'
+		set @Mensaje = 'No se puede repetir el documento para más de un usuario'
 
 
 end
@@ -910,19 +910,19 @@ to Gerente
 
 
 
---aqui vamos a meter lo del cifrado de la contraseÃ±a supuestamente oe camello
+--aqui vamos a meter lo del cifrado de la contraseña supuestamente oe camello
 ---hash con sal
 ALTER TABLE USUARIO
-ADD Salt VARBINARY(16); -- El tamaÃ±o de la sal puede variar, 16 bytes es comÃºn
+ADD Salt VARBINARY(16); -- El tamaño de la sal puede variar, 16 bytes es común
 
 ALTER TABLE USUARIO
-ALTER COLUMN Clave VARCHAR(255); -- Ajusta el tamaÃ±o segÃºn tus necesidades
+ALTER COLUMN Clave VARCHAR(255); -- Ajusta el tamaño según tus necesidades
 
 DECLARE @Salt VARBINARY(16);
 SET @Salt = CRYPT_GEN_RANDOM(16); -- Genera una sal aleatoria
 
 DECLARE @Contra NVARCHAR(50);
-SET @Contra = 'contraseÃ±a';
+SET @Contra = 'contraseña';
 
 INSERT INTO USUARIO (Documento, NombreCompleto, Correo, Clave, Salt, IdRol, Estado)
 VALUES ('12345678', 'Usuario', 'usuario@gmail.com', 
@@ -930,7 +930,7 @@ VALUES ('12345678', 'Usuario', 'usuario@gmail.com',
 
 
 --cifrado playfair
--- FunciÃ³n para generar la matriz Playfair
+-- Función para generar la matriz Playfair
 CREATE FUNCTION dbo.GenerarMatrizPlayfair(@clave NVARCHAR(100))
 RETURNS TABLE
 AS
@@ -959,7 +959,7 @@ SELECT Letra
 FROM #TempMatriz
 ORDER BY Fila, Columna;
 
--- FunciÃ³n para cifrar con cifrado Playfair
+-- Función para cifrar con cifrado Playfair
 CREATE FUNCTION dbo.CifrarPlayfair(@texto NVARCHAR(100), @clave NVARCHAR(100))
 RETURNS NVARCHAR(100)
 AS
@@ -968,13 +968,13 @@ BEGIN
     INSERT INTO @matriz
     SELECT * FROM dbo.GenerarMatrizPlayfair(@clave);
     
-    -- Resto del cÃ³digo para cifrar Playfair
-    -- ... (implementa el cifrado Playfair segÃºn las reglas del algoritmo)
+    -- Resto del código para cifrar Playfair
+    -- ... (implementa el cifrado Playfair según las reglas del algoritmo)
     
     RETURN @texto;  -- Reemplaza esto con el resultado real del cifrado
 END;
 
--- FunciÃ³n para descifrar con cifrado Playfair
+-- Función para descifrar con cifrado Playfair
 CREATE FUNCTION dbo.DescifrarPlayfair(@textoCifrado NVARCHAR(100), @clave NVARCHAR(100))
 RETURNS NVARCHAR(100)
 AS
@@ -983,8 +983,8 @@ BEGIN
     INSERT INTO @matriz
     SELECT * FROM dbo.GenerarMatrizPlayfair(@clave);
     
-    -- Resto del cÃ³digo para descifrar Playfair
-    -- ... (implementa el descifrado Playfair segÃºn las reglas del algoritmo)
+    -- Resto del código para descifrar Playfair
+    -- ... (implementa el descifrado Playfair según las reglas del algoritmo)
     
     RETURN @textoCifrado;  -- Reemplaza esto con el resultado real del descifrado
 END;

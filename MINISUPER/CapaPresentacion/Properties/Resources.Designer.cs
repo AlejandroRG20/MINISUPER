@@ -140,8 +140,7 @@ namespace CapaPresentacion.Properties {
         ///            table.border td {
         ///                text-align: center;
         ///                padding: 5px;
-        ///                border: 1px solid black;
-        ///            } [resto de la cadena truncado]&quot;;.
+        ///                border: 1px solid b [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string PlantillaCompra {
             get {
@@ -179,8 +178,7 @@ namespace CapaPresentacion.Properties {
         ///            table.border td {
         ///                text-align: center;
         ///                padding: 5px;
-        ///                border: 1px solid black;
-        ///            } [resto de la cadena truncado]&quot;;.
+        ///                border: 1px solid b [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string PlantillaVenta {
             get {

@@ -55,9 +55,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.SteelBlue;
+            this.label2.BackColor = System.Drawing.Color.Ivory;
             this.label2.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Orange;
             this.label2.Location = new System.Drawing.Point(21, 176);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(190, 54);
@@ -67,13 +67,14 @@
             // iconPictureBox1
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Orange;
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Store;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Orange;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 114;
-            this.iconPictureBox1.Location = new System.Drawing.Point(56, 41);
+            this.iconPictureBox1.IconSize = 112;
+            this.iconPictureBox1.Location = new System.Drawing.Point(58, 41);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(114, 114);
+            this.iconPictureBox1.Size = new System.Drawing.Size(112, 114);
             this.iconPictureBox1.TabIndex = 2;
             this.iconPictureBox1.TabStop = false;
             // 
